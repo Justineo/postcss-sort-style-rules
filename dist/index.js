@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _postcss = require('postcss');
 
 var _postcss2 = _interopRequireDefault(_postcss);
@@ -72,13 +74,13 @@ exports.default = _postcss2.default.plugin('postcss-sort-style-rules', function 
                     prev.max = current;
                 }
                 return prev;
-            }, Object.assign({}, DEFAULT_RANGE));
+            }, _extends({}, DEFAULT_RANGE));
 
             var scope = getScope(node);
             if (!cache[scope]) {
                 cache[scope] = [];
             }
-            cache[scope].push(Object.assign(range, { node: node }));
+            cache[scope].push(_extends(range, { node: node }));
         });
 
         var _loop = function _loop(scope) {

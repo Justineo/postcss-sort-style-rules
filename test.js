@@ -19,7 +19,7 @@ function getDiff(left, right) {
             let lines = value.split('\n');
 
             // max line count for each item
-            let keepLines = 500;
+            let keepLines = 6;
             // lines to be omitted
             let omitLines = lines.length - keepLines;
             if (lines.length > keepLines) {
