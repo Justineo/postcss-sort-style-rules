@@ -37,9 +37,10 @@ function compareRange(r1, r2) {
     return 0;
 }
 
+const MAX = Number.POSITIVE_INFINITY;
 const DEFAULT_RANGE = {
-    max: Array(4).fill(0),
-    min: Array(4).fill(Number.POSITIVE_INFINITY)
+    max: [0, 0, 0, 0],
+    min: [MAX, MAX, MAX, MAX]
 };
 
 export default postcss.plugin('postcss-sort-style-rules', () => {
