@@ -1,0 +1,9 @@
+.title {
+  color: #69c;
+}
+.title {
+  line-height: 2;
+}
+.post .title {
+  font-weight: 700;
+}

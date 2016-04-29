@@ -1,0 +1,12 @@
+div {
+  box-sizing: border-box;
+}
+.post {
+  font-size: 1.5rem;
+}
+#title, div a {
+  color: #69c;
+}
+.post {
+  color: #ccc;
+}
