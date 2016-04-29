@@ -6,7 +6,9 @@
 [ci-img]:  https://travis-ci.org/Justineo/postcss-sort-style-rules.svg
 [ci]:      https://travis-ci.org/Justineo/postcss-sort-style-rules
 
-The position of CSS rule
+The order of CSS style rules only matters if two selector share same specificity. If two style rules have different specificity, changing their order will be safe and this will increase the chance that two style rules with same specificity become adjacent style rules. This is where [postcss-merge-rules](https://github.com/ben-eb/postcss-merge-rules) become useful.
+
+If a style rule have a group of selectors, we can only rearrange the order if all selectors in one group have lower specificity than those in the other group.
 
 ```css
 .post {

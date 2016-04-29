@@ -50,9 +50,10 @@ function compareRange(r1, r2) {
     return 0;
 }
 
+var MAX = Number.POSITIVE_INFINITY;
 var DEFAULT_RANGE = {
-    max: Array(4).fill(0),
-    min: Array(4).fill(Number.POSITIVE_INFINITY)
+    max: [0, 0, 0, 0],
+    min: [MAX, MAX, MAX, MAX]
 };
 
 exports.default = _postcss2.default.plugin('postcss-sort-style-rules', function () {
