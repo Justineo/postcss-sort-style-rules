@@ -1,0 +1,35 @@
+.title {
+  color: #69c;
+}
+.post .title {
+  font-weight: 700;
+}
+.title {
+  line-height: 2;
+}
+@media (max-width: 720px) {
+  #footer {
+    background: #ccc;
+  }
+  .title {
+    color: #369;
+  }
+  .post .title {
+    font-weight: 400;
+  }
+  #title, div a {
+    color: #69c;
+  }
+  .title {
+    line-height: 1.2;
+  }
+}
+.title:hover {
+  font-weight: 700;
+}
+#title, div a {
+  color: #69c;
+}
+p {
+  line-height: 2;
+}

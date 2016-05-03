@@ -1,6 +1,6 @@
 {
   "name": "postcss-sort-style-rules",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "PostCSS plugin to sort style rules according to selector specificity.",
   "main": "dist/index.js",
   "keywords": [

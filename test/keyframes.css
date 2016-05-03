@@ -1,0 +1,25 @@
+.title {
+  color: #69c;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.post .title {
+  font-weight: 700;
+}
+.title {
+  line-height: 2;
+}

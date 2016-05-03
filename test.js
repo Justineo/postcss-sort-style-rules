@@ -59,4 +59,6 @@ function run(task, desc) {
 /* eslint-disable max-len */
 run('single', 'Should sort rules correctly with single selectors.');
 run('group', 'Should sort rules correctly with grouped selectors.');
+run('scope', 'Should sort rules inside/outside @media correctly.');
+run('keyframes', 'Should not sort @keyframes progress.');
 /* eslint-enable max-len */
