@@ -6,11 +6,14 @@
 [ci-img]:  https://travis-ci.org/Justineo/postcss-sort-style-rules.svg
 [ci]:      https://travis-ci.org/Justineo/postcss-sort-style-rules
 
-The order of CSS style rules only matters if two selector share same specificity. If two style rules have different specificity, changing their order will be safe and this will increase the chance that two style rules with same specificity become adjacent style rules. This is where [postcss-merge-rules](https://github.com/ben-eb/postcss-merge-rules) become useful.
+The order of CSS style rules only matters if two selector share same specificity. If two style rules have different specificity, changing their order will be safe and this will increase the chance that two style rules with same selector become adjacent style rules. This is where [postcss-merge-rules](https://github.com/ben-eb/postcss-merge-rules) become useful.
 
 If a style rule have a group of selectors, we can only rearrange the order if all selectors in one group have lower specificity than those in the other group.
 
 ```css
+h1 {
+  margin-bottom: 0.5em;
+}
 .post {
   font-size: 1.5rem;
 }
@@ -20,14 +23,20 @@ If a style rule have a group of selectors, we can only rearrange the order if al
 .post {
   color: #ccc;
 }
-div {
-  box-sizing: border-box;
+h1 {
+  margin-top: 1em;
+}
+.post {
+  width: 100%;
 }
 ```
 
 ```css
-div {
-  box-sizing: border-box;
+h1 {
+  margin-bottom: 0.5em;
+}
+h1 {
+  margin-top: 1em;
 }
 .post {
   font-size: 1.5rem;
@@ -37,6 +46,9 @@ div {
 }
 .post {
   color: #ccc;
+}
+.post {
+  width: 100%;
 }
 ```
 
