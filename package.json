@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Justineo/postcss-sort-style-rules",
   "dependencies": {
     "postcss": "^5.0.16",
-    "specificity": "^0.1.5"
+    "specificity": "^0.4.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
